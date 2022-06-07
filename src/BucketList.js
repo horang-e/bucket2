@@ -13,7 +13,7 @@ const BucketList = (props) => {
   // 우리는 그 중, bucket 안에 들어있는 list를 가져옵니다.
   const my_lists = useSelector((state) => state.bucket.list);
   return (
-    <div>
+    <ListStyle>
       {my_lists.map((list, index) => {
         return (
           <ItemStyle
@@ -30,9 +30,18 @@ const BucketList = (props) => {
           </ItemStyle>
         );
       })}
-    </div>
+    </ListStyle>
   );
 };
+
+const ListStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 60vh;
+`;
 
 const ItemStyle = styled.div`
 border: rgb(250, 250, 250) 2px solid;
