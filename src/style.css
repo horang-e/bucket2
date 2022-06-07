@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'bombaram';
+  src: url('../src/font/HSBombaram3.0_Thin.ttf') format('truetype');
+}
+.App {
+  background-color: #eee;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  background-color: #fff;
+  width: 50vw;
+  max-width: 350px;
+  margin: auto;
+  height: 80vh;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.container > h1 {
+  color: slateblue;
+  text-align: center;
+}
+
+.container > .line {
+  margin: 16px 0px;
+}
+
+.list-item {
+  border: rgb(250, 250, 250) 2px solid;
+  border-radius: 40px;
+  padding: 16px;
+  margin: 8px;
+  background-color: rgb(168, 206, 221);
+}
