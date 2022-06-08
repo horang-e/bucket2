@@ -4,14 +4,14 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 
-const BucketList = (props) => {
+const BucketList = () => {
   let navigate = useNavigate();
-  //   이 부분은 주석처리!
-  //   console.log(props);
-  //   const my_lists = props.list;
+  
   // 여기에서 state는 리덕스 스토어가 가진 전체 데이터예요.
   // 우리는 그 중, bucket 안에 들어있는 list를 가져옵니다.
   const my_lists = useSelector((state) => state.bucket.list);
+  // 리듀서에서 보낸 스테이트, 리듀서함수이름bucket, 그안의 list
+  console.log(my_lists)
   return (
     <ListStyle>
       {my_lists.map((list, index) => {

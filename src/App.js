@@ -19,31 +19,16 @@ function App() {
 
   React.useEffect(() => {
     dispatch(loadBucketFB());
-  }, [])
+  },[dispatch])
 
   const addBucketList = () => {
-    // 스프레드 문법! 기억하고 계신가요? :)
-    // 원본 배열 list에 새로운 요소를 추가해주었습니다.
-    // 여긴 이제 주석처리!
-    // setList([...list, text.current.value]);
-
-    // dispatch(createBucket({text :text.current.value}));
-    // console.log(text.current.value)
-
-    dispatch(createBucketFB({ text: text.current.value, completed: false }))
+    dispatch(createBucketFB({ text: text.current.value, completed: false }));
+    text.current.value="";
   };
 
   return (
     <div className="App">
       <div>
-
-        {/* <Route
-            path="/"
-            exact
-            render={(props) => <BucketList list={list} />}
-          /> */}
-        {/* 이제는 render를 사용해서 list를 넘겨줄 필요가 없죠! 버킷리스트가 리덕스에서 데이터를 알아서 가져갈거니까요! */}
-
         <Container>
           <Title>내 버킷리스트</Title>
           <Line />
@@ -67,7 +52,7 @@ const Container = styled.div`
   background-color: #fff;
   width: 60vw;
   max-width: 350px;
-  margin: auto;
+  /* margin: auto; */
   height: 70vh;
   padding: 16px;
   border: 1px solid #ddd;
