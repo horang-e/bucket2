@@ -30,7 +30,7 @@ function App() {
     <div className="App">
       <div>
         <Container>
-          <Title>내 버킷리스트</Title>
+          <Title>TODO LIST🍊 </Title>
           <Line />
           <Routes>
             <Route path="/" element={<BucketList />} />
