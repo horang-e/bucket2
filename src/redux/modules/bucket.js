@@ -99,7 +99,7 @@ export const updateBucketFB = (bucket_id) => {
     await updateDoc(docRef, { completed: true })
     // 업뎃독 사용해서 docRef의 completed값을 트루로 바꾸어줌
     console.log(getState().bucket)
-    //getState..는 왜..쓰더라 업뎃한내용을 가져와서 다시 띄워주는건가..? 업뎃했다는걸 redux한테도 알리는건가?음 그런듯
+    //getState..는  현재 상태로 조회가 가능 이상태로는 db에만 바뀐상태로 저장되어있고 콘솔엔 원래대로 저장되어있어
     const _bucket_list = getState().bucket.list;
     //업뎃된 내용 배열
     const bucket_index = _bucket_list.findIndex((b) => {
